@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inteligencia Artificial</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" href="css/main.css">
+	<script src="js/script.js"></script>
+</head>
+<body>
+	<form name = "formulario" class="form register" id = "formulario" method="post" onsubmit="return validar();">
+		<fieldset>
+			<legend class="leyendaArriba">
+				Formulario para Registro de Bacterias
+			</legend>
+			<br>
+			<label>
+				Genero:
+				<input type="text" id="genero" name="genero" >
+			</label>
+			<br>
+			<br>
+			<br>
+			<label>
+				Especie:
+				<input type="text" name="especie" id = "especie">
+			</label>
+			<br>
+			<br>
+			<br>
+			<label>
+				Tamaño: 
+				<input type="text" name="tamanio" id = "tamanio">
+			</label>
+			<br>
+			<br>
+			<br>
+			<label>
+				Número de flagelos: 
+				<input type="text" name="flagelos" id = "flagelos">
+			</label>
+			<br>
+			<br>
+			<br>
+			<label>
+				Fecha de descubrimiento:
+				<input type="date" name="fecha" id = "fecha">
+			</label>
+			<br>
+			<br>
+			<br>
+			<label for="hear-about">
+				Forma de la bacteria:
+			</label>
+			<select name="formabacteriana" id="forma">
+				<option value="coco">Coco</option>
+				<option value="bacilo">Bacilo</option>
+				<option value="cocobacilo">Cocobacilo</option>
+				<option value="espiral">Espiroqueta</option>
+			</select>
+			<br>
+			<br>
+			<br>
+			<legend>
+				¿Hace parte de la flora normal?
+			</legend> 
+			<br>
+			<label>
+				<input type="radio" name="flora" value="si" id = "floraSi">
+				Si
+			</label>
+			<label>
+				<input type="radio" name="flora" value="no" id = "floraNo">
+				No
+			</label>
+			<br>
+			<br>
+			<br>
+			<legend>
+				Prevalencia en Colombia:
+			</legend>
+			<br>
+			<input type="range" id = "getPre" name="getPre" min="0" max="100" step = "10" onchange="prevalency()"">
+			<input class = "textoPrevalencia sinBorde fondoInputPrevalencia" type="text" id = "putPre" name="putPre">
+			<br>
+			<br>
+			<br>
+			<label>
+				<input type="checkbox" name="condiciones" value="condiciones" id = "condiciones">
+				Acepta los terminos y condiciones de la página web
+			</label>
+			<br>
+			<br>
+			<br>
+
+			<input class = "disenioBoton" type="button" id="mostrar" value="Agregar" onclick="Javascript:mostrarBacterias()"> 
+			<br><br><br>
+			<div id = "header"></div>
+			<br><br>
+			
+			<div id="resultados">
+				<table>
+					<tr>
+						<th>Genero</th>
+						<th>Especie</th>
+						<th>Tamaño</th>
+						<th>Flagelos</th>
+						<th>Fecha</th>
+						<th>Forma</th>
+						<th>Flora</th>
+						<th>Prevalencia</th>
+					</tr>
+				</table>
+			</div>
+			<br><br>
+			<div>
+				<label>Ingrese lo que desea buscar</label>
+				<input class = "centrar" type="text" name="campo" id = "campo">
+				<br>
+				<br>
+				<label>Seleccione la categoría</label>
+
+				<select class = "busqueda" id = "opciones">
+					<option value = ""></option>
+					<option value = "animal">Genero</option>
+					<option value = "edad">Especie</option>
+					<option value = "sexo">Tamaño</option>
+					<option value = "pais">Forma</option>
+				</select>
+				<br>
+				<br>
+				<input class = "disenioBoton" type="button" id="mostrar" value="Buscar" onclick="Javascript:buscar()"> 
+
+			</div>
+			<br><br>
+
+
+			<div >
+				<table id = "tabla2">
+					<thead >
+						<tr>
+							<th>Genero</th>
+							<th>Especie</th>
+							<th>Tamaño</th>
+							<th>Flagelos</th>
+							<th>Fecha</th>
+							<th>Forma</th>
+							<th>Flora</th>
+							<th>Prevalencia</th>
+						</tr>
+					</thead>
+				</table>
+			</div> 
+		</fieldset>
+		<br><br>
+
+
+	</form>
+
+</body>
+</html>
